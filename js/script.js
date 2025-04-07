@@ -5,7 +5,7 @@ const createPhoto = (item) => {
 
     const photo = `<div class="photo col-12 col-md-6 col-lg-4">
                     <div class="content p-4 position-relative bg-light">
-                        <img src="${url}" alt="" class="img-fluid mb-3">
+                        <img src="${url}" alt="" class="img-fluid mb-3 photo-img">
 
                     <p class="date fs-5 text-secondary">${date}</p>
                     <p class="description fs-4">${title}</p>
@@ -47,6 +47,14 @@ const insertPhoto = () => {
             elem.addEventListener('click', function(){
                 // rimuovo la classe 'd-none' all'overlay
                 document.querySelector('.overlay').classList.remove('d-none')
+
+                // recupero l'immagine dell'overlay
+                const overlayImg = document.getElementById('overlay-image')
+
+                //modifico la fonte dell'immagine
+                overlayImg.src = elem.childNodes[1].childNodes[1].src
+
+                console.log(elem.childNodes[1].childNodes[1].src)
             })
         })
     })
@@ -59,4 +67,3 @@ document.getElementById('overlay-button').addEventListener('click', function() {
     // aggiungo la classe 'd-none' all'overlay
     document.querySelector('.overlay').classList.add('d-none')
 })
-
