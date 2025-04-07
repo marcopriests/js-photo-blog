@@ -3,7 +3,7 @@ const createPhoto = (item) => {
     //destrutturo item per ricavarne delle variabili
     const { title, date, url } = item
 
-    const photo = `<div id="photo" class="col-12 col-md-6 col-lg-4">
+    const photo = `<div class="photo col-12 col-md-6 col-lg-4">
                     <div class="content p-4 position-relative bg-light">
                         <img src="${url}" alt="" class="img-fluid mb-3">
 
@@ -35,9 +35,28 @@ const insertPhoto = () => {
         }
 
         console.log(data)
-        
+
         document.getElementById('photo-board').innerHTML = board
+
+        // recupero le photo dal dom
+        const photos = document.querySelectorAll('.photo')
+
+        // creo un ciclo per selezionare l'elemento dell'array sul quale voglio lavorare
+        photos.forEach((elem) => {
+            // aggiungo un event listener ad ogni elemento
+            elem.addEventListener('click', function(){
+                // rimuovo la classe 'd-none' all'overlay
+                document.querySelector('.overlay').classList.remove('d-none')
+            })
+        })
     })
 }
 
 insertPhoto()
+
+// aggiungo la classe 'd-none' all'overlay quando viene cliccato il bottone per chiuderlo
+document.getElementById('overlay-button').addEventListener('click', function() {
+    // aggiungo la classe 'd-none' all'overlay
+    document.querySelector('.overlay').classList.add('d-none')
+})
+

@@ -11,15 +11,16 @@ header {
     font-size: 100px;
 }
 
-#photo .content {
+.photo .content {
     box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.473);
+    cursor: pointer;
 }
 
-#photo .description {
+.photo .description {
     font-family: "Edu Tas Beginner", sans-serif;
 }
 
-#photo .date {
+.photo .date {
     font-family: "Sometype Mono", monospace;
 }
 
