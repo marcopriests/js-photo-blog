@@ -1,8 +1,26 @@
+body {
+    background-image: url(../img/cork.png);
+}
+
 header {
     background-image: url(../img/wall.png);
 }
 
-.titolo h1{
+.title h1 {
     font-family: "Edu Tas Beginner", sans-serif;
     font-size: 100px;
+}
+
+#photo .description {
+    font-family: "Edu Tas Beginner", sans-serif;
+}
+
+#photo .date {
+    font-family: "Sometype Mono", monospace;
+}
+
+.red-pin {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -30%);
 }
