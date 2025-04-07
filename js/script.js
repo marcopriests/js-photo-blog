@@ -34,8 +34,6 @@ const insertPhoto = () => {
 
         }
 
-        console.log(data)
-
         document.getElementById('photo-board').innerHTML = board
 
         // recupero le photo dal dom
@@ -52,9 +50,7 @@ const insertPhoto = () => {
                 const overlayImg = document.getElementById('overlay-image')
 
                 //modifico la fonte dell'immagine
-                overlayImg.src = elem.childNodes[1].childNodes[1].src
-
-                console.log(elem.childNodes[1].childNodes[1].src)
+                overlayImg.src = elem.querySelector('img').src
             })
         })
     })
