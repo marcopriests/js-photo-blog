@@ -7,8 +7,8 @@ const createPhoto = (item) => {
                     <div class="content p-4 position-relative bg-light">
                         <img src="${url}" alt="" class="img-fluid mb-3 photo-img">
 
-                    <p class="date fs-5 text-secondary">${date}</p>
-                    <p class="description fs-4">${title}</p>
+                    <div class="date fs-5 text-secondary">${date}</div>
+                    <p class="description fs-3 text-uppercase fw-bold">${title}</p>
 
                     <div class="red-pin position-absolute m-auto">
                         <img src="./img/pin.svg" alt="">
